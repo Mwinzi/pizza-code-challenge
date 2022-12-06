@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :restaurants, only: [:index, :show, :create, :update, :destroy]
+  resources :pizzas, only: [:index, :show, :create, :update, :destroy]
+  resources :restaurant_pizzas, only: [:create]
 end
